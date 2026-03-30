@@ -13,7 +13,7 @@ const Data = {
     me: {
         title: "Jessica",
         image: "images/me.png",
-        description: "A mischievous girl who is curious about everything. She has a hundred different interests."
+        description: "Hey! Welcome to my 8-bit universe. I'm Jessica. I have a hundred hobbies (and counting)—if it’s something new and interesting, I want to give it a try. In this room, every pixel holds a piece of my curiosity. Feel free to explore, but be careful not to make a mess—oh wait, it’s already a mess anyway! 🙂"
     }
 };
 
