@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="welcome-overlay" onclick="closeWelcomeCard(event)">
-        <div class="welcome-card">
+        <div class="welcome-card" onclick="event.stopPropagation()">
             <h1>Welcome to <br> My Pixel Life!</h1><br>
             <p>Click on the objects in the room to learn more about them.</p>
             <button onclick="closeWelcomeCard()">Enter</button>
