@@ -43,13 +43,11 @@ html, body {
     background-position: center;
     
     image-rendering: pixelated;
-    image-rendering: crisp-edges;
 }
 
 .obj-trigger {
     position: absolute;
     background: transparent;
-    image-rendering: pixelated;
     cursor: pointer;
 }
 
@@ -62,82 +60,58 @@ html, body {
     100% { transform: translate(-50%, -50%); }
 }
 
-#poodle-button {
+.object-button {
     position: absolute;
     border: none;
-    background-image: url("images/poodle.png");
     background-color: transparent;
     background-size: contain; 
     background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
     transform: translate(-50%, -50%);
+}
+.object-button:hover {
+    animation: pixel-shake 0.1s infinite; 
+    filter: brightness(1.3);
+}
+
+#poodle-button {
+    background-image: url("images/poodle.png");
+    width: 44px;
+    height: 50px;
     top: 60%;
     left: 45%;
 }
 
-#poodle-button:hover {
-    animation: pixel-shake 0.1s infinite; 
-    filter: brightness(1.3);
-}
 
 #guitar-button {
-    position: absolute;
-    border: none;
     background-image: url("images/guitar.png");
-    background-color: transparent;
-    background-size: contain; 
-    background-repeat: no-repeat;
-    width: 95px;
+    width: 55px;
     height: 95px;
-    transform: translate(-50%, -50%);
     top: 63%;
     left: 65%;
 }
 
-#guitar-button:hover {
-    animation: pixel-shake 0.1s infinite; 
-    filter: brightness(1.3);
-}
 
 #me-button {
-    position: absolute;
-    border: none;
     background-image: url("images/me.png");
-    background-color: transparent;
-    background-size: contain; 
-    background-repeat: no-repeat;
-    width: 130px;
+    width: 85px;
     height: 130px;
-    transform: translate(-50%, -50%);
-    top: 75%;
+    top: 76%;
     left: 54%;
 }
 
 #me-button:hover {
-    animation: pixel-shake 0.15s infinite; 
-    filter: brightness(1.3);
+    animation: pixel-shake .15s infinite; 
 }
 
 
 #notebook-button {
-    position: absolute;
-    border: none;
     background-image: url("images/notebook.png");
-    background-color: transparent;
-    background-size: contain; 
-    background-repeat: no-repeat;
     width: 65px;
-    height: 65px;
-    transform: translate(-50%, -50%);
-    top: 77%;
-    left: 37%;
+    height: 48px;
+    top: 76%;
+    left: 38%;
 }
 
-#notebook-button:hover {
-    animation: pixel-shake 0.1s infinite; 
-    filter: brightness(1.3);
-}
 
 /* -----------Card styles------------------ */
 .card-overlay {
@@ -194,14 +168,6 @@ html, body {
 }
 
 
-.close-btn {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 30px;
-    cursor: pointer;
-    color: #f00;
-}
 
 
 /* -----------Notebook styles------------------ */
@@ -223,11 +189,23 @@ html, body {
     background-image: url("images/notebook-open.png");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 800px;
-    height: 900px;
+    width: 780px;
+    height: 600px;
     padding: 30px;
     text-align: center;
     position: relative;
     image-rendering: pixelated;
     animation: pop-in 0.3s cubic-bezier(0.175, 0.182, 0.165, 1.3);
+    flex-direction: row;
+}
+
+#notebookContent {
+    flex-grow: 1;
+    margin: 45px;
+    column-count: 2;
+    column-gap: 110px;
+    font-size: 20pt;
+    overflow: hidden;
+    border: red solid 2px;
+
 }
