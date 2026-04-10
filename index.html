@@ -19,21 +19,24 @@
         <button class="object-button" id="poodle-button" onclick="openCard('poodle')"></button>
         <Button class="object-button" id="guitar-button" onclick="openCard('guitar')"></Button>
         <Button class="object-button" id="me-button" onclick="openCard('me')"></Button>
+        <Button class="object-button" id="notebook-button" onclick="openNotebook()"></Button>
     </div>
 
     <div class="card-overlay" onclick="closeCard(event)">
     
-        <div class="card" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeCard()">x</span>
-            
+        <div class="card" onclick="event.stopPropagation()">            
             <div id="card-content">
                 <h2 id="card-title"></h2>
-                <div class="card-img-container">
-                    <img id="card-image" src="" alt="pixel asset">
-                </div>
+                <img id="card-image">
                 <p id="card-description"></p>
             </div>
         </div>
     </div>
+
+    <div class="notebook-overlay" onclick="closenotebook(event)">
+        <div class="notebook" id="notebook" onclick="event.stopPropagation()">
+        </div>
+    </div>
+
 </body>
 </html>
