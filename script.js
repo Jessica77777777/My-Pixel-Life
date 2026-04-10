@@ -45,3 +45,18 @@ function closeCard() {
     const cardOverlay = document.querySelector('.card-overlay');
     cardOverlay.style.display = 'none';
 }
+
+
+
+function openNotebook() {
+    /*alert("This notebook is currently under construction. Please check back later for updates!");*/
+    const cardOverlay = document.querySelector('.notebook-overlay');
+    cardOverlay.style.display = 'flex';
+    const notebook = document.getElementById('notebook');
+    notebook.style.display = 'flex';
+}
+
+function closenotebook() {
+    const cardOverlay = document.querySelector('.notebook-overlay');
+    cardOverlay.style.display = 'none';
+}
