@@ -13,9 +13,22 @@ const Data = {
     me: {
         title: "Jessica",
         image: "images/me.png",
-        description: "Hey! Welcome to my 8-bit universe. I'm Jessica. I have a hundred hobbies (and counting)—if it’s something new and interesting, I want to give it a try. In this room, every pixel holds a piece of my curiosity. Feel free to explore, but be careful not to make a mess—oh wait, it’s already a mess anyway! 🙂"
+        description: "Hey! Welcome to my Pixel universe. I'm Jessica. I have a hundred hobbies (and counting)—if it’s something new and interesting, I want to give it a try. In this room, every pixel holds a piece of my curiosity. Feel free to explore, but be careful not to make a mess—oh wait, it’s already a mess anyway! 🙂"
     }
 };
+
+const funfects = [
+    "I Love pop music, and I was the lead singer of my pop band called “694.” We performed at school events and local venues. Highlight of our career was when we won the local talent show and got to perform at the city festival.",
+    "I have a secret talent for doing crocheting.",
+    "I can speak three languages: English, Mandarin, and a little bit of Korean.",
+    "My life goal is to travel around the world and try every cuisine out there.",
+    "I wrote a song about I met a goodlooking guy at a bar, and the song won a local music competition.",
+    "I have a collection of stickers that I’ve been collecting since I was a kid, and I still add to it whenever I find a cool one.",
+    "My favorite cartoon is Phineas and Ferb, and I still watch it.",
+    "My favorite movie is now Project Hail Mary. I LOVE science fiction.",
+    "If I can do any job without worrying about money, I would be a dog groomer.",
+    "I had a pet hamster named Bobo."
+];
 
 function closeWelcomeCard() {
     const welcomeOverlay = document.querySelector('.welcome-overlay');
@@ -23,7 +36,7 @@ function closeWelcomeCard() {
 }
 
 
-function openCard(itemId) {
+function openCard(itemname) {
     const cardOverlay = document.querySelector('.card-overlay');
     const title = document.getElementById('card-title');
     const description = document.getElementById('card-description');
@@ -31,7 +44,7 @@ function openCard(itemId) {
     cardOverlay.style.display = 'flex';
 
 
-    const itemData = Data[itemId];
+    const itemData = Data[itemname];
 
     if (itemData) {
         title.innerText = itemData.title;
@@ -48,10 +61,14 @@ function closeCard() {
 
 function openNotebook() {
     /*alert("This notebook is currently under construction. Please check back later for updates!");*/
-    const cardOverlay = document.querySelector('.notebook-overlay');
-    cardOverlay.style.display = 'flex';
+    const notebookOverlay = document.querySelector('.notebook-overlay');
     const notebook = document.getElementById('notebook');
-    notebook.style.display = 'flex';
+    const notebookContent = document.getElementById('notebookContent');
+    const randomFunfact = funfects[Math.floor(Math.random() * funfects.length)];
+
+    notebookOverlay.style.display = 'flex';
+    notebook.style.display = 'block';
+    notebookContent.innerText = randomFunfact;
 }
 
 function closenotebook() {
