@@ -24,7 +24,7 @@ const funfects = [
     "My life goal is to travel around the world and try every cuisine out there.",
     "I wrote a song about I met a goodlooking guy at a bar, and the song won a local music competition.",
     "I have a collection of stickers that I’ve been collecting since I was a kid, and I still add to it whenever I find a cool one.",
-    "My favorite catoon is Phineas and Ferb, and I still watch it.",
+    "My favorite cartoon is Phineas and Ferb, and I still watch it.",
     "My favorite movie is now Project Hail Mary. I LOVE science fiction.",
     "If I can do any job without worrying about money, I would be a dog groomer.",
     "I had a pet hamster named Bobo."
@@ -36,7 +36,7 @@ function closeWelcomeCard() {
 }
 
 
-function openCard(itemId) {
+function openCard(itemname) {
     const cardOverlay = document.querySelector('.card-overlay');
     const title = document.getElementById('card-title');
     const description = document.getElementById('card-description');
@@ -44,7 +44,7 @@ function openCard(itemId) {
     cardOverlay.style.display = 'flex';
 
 
-    const itemData = Data[itemId];
+    const itemData = Data[itemname];
 
     if (itemData) {
         title.innerText = itemData.title;
