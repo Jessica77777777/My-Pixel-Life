@@ -59,21 +59,17 @@ function closeCard() {
     cardOverlay.style.display = 'none';
 }
 
-
-
 function openNotebook() {
     /*alert("This notebook is currently under construction. Please check back later for updates!");*/
-    const cardOverlay = document.querySelector('.notebook-overlay');
-    cardOverlay.style.display = 'flex';
-    const card = document.getElementById('notebook');
-    card.style.display = 'flex';
-    const randomFunfact = funfects[Math.floor(Math.random() * funfects.length)];
+    const notebookOverlay = document.querySelector('.notebook-overlay');
+    const notebook = document.getElementById('notebook');
     const notebookContent = document.getElementById('notebookContent');
+    const randomFunfact = funfects[Math.floor(Math.random() * funfects.length)];
+
+    notebookOverlay.style.display = 'flex';
+    notebook.style.display = 'block';
     notebookContent.innerText = randomFunfact;
-
 }
-
-
 
 function closenotebook() {
     const cardOverlay = document.querySelector('.notebook-overlay');
