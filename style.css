@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'pixelTitle';
+    src: url('assets/fonts/04B_03__.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'pixelBody';
+    src: url('assets/fonts/rainyhearts.ttf') format('truetype');
+}
+
+h1, h2, button {
+    font-family: 'pixelTitle', cursive;
+    color: #000000;
+}
+
+p{
+    font-family: 'pixelBody', cursive;
+    color: #000000;
+}
+
 html, body {
     margin: 0;
     padding: 0;
