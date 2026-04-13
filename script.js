@@ -29,7 +29,7 @@ const Data = {
     }
 };
 
-const funfects = [
+const funfacts = [
     "I Love pop music, and I was the lead singer of my pop band called “694.” We performed at school events and local venues. Highlight of our career was when we won the local talent show and got to perform at the city festival.",
     "I have a secret talent for doing crocheting.",
     "I can speak three languages: English, Mandarin, and a little bit of Korean.",
@@ -79,7 +79,7 @@ function openNotebook() {
     cardOverlay.style.display = 'flex';
     const card = document.getElementById('notebook');
     card.style.display = 'flex';
-    const randomFunfact = funfects[Math.floor(Math.random() * funfects.length)];
+    const randomFunfact = funfacts[Math.floor(Math.random() * funfacts.length)];
     const notebookContent = document.getElementById('notebookContent');
     notebookContent.innerText = randomFunfact;
 
