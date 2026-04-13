@@ -1,3 +1,15 @@
+const backgroundMusic = document.getElementById('background-music');
+function handleMusic() {
+    if (backgroundMusic.paused) {
+        backgroundMusic.play();
+    } else {
+        backgroundMusic.pause();
+    }
+    const playPauseButton = document.getElementById('play-pause');
+    playPauseButton.textContent = backgroundMusic.paused ? 'Play' : 'Pause';
+}
+
+
 
 const Data = {
     poodle: {

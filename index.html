@@ -8,6 +8,12 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <audio id="background-music" src="assets/1-02. The Star Festival.mp3" loop autoplay></audio>
+    <div id="audio-controls">
+        <button id="play-pause" onclick="handleMusic()">Play</button>
+    </div>
+
+
     <div class="welcome-overlay" onclick="closeWelcomeCard(event)">
         <div class="welcome-card">
             <h1>Welcome to <br> My Pixel Life!</h1><br>
