@@ -1,5 +1,5 @@
 
-const Data = {
+const data = {
     poodle: {
         title: "Beibei",
         image: "images/poodle.png",
@@ -18,7 +18,7 @@ const Data = {
 };
 
 const funfects = [
-    "I Love pop music, and I was the lead singer of my pop band called “694.” We performed at school events and local venues. Highlight of our career was when we won the local talent show and got to perform at the city festival.",
+    "I love pop music, and I was the lead singer of my pop band called “694.” We performed at school events and local venues. Highlight of our career was when we won the local talent show and got to perform at the city festival.",
     "I have a secret talent for doing crocheting.",
     "I can speak three languages: English, Mandarin, and a little bit of Korean.",
     "My life goal is to travel around the world and try every cuisine out there.",
