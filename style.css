@@ -185,27 +185,25 @@ html, body {
 }
 
 #notebook{
-    display: none;
+    display: block;
     background-image: url("images/notebook-open.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 780px;
     height: 600px;
     padding: 30px;
-    text-align: center;
-    position: relative;
+    text-align: left;
     image-rendering: pixelated;
     animation: pop-in 0.3s cubic-bezier(0.175, 0.182, 0.165, 1.3);
-    flex-direction: row;
 }
 
 #notebookContent {
-    flex-grow: 1;
+    display: block;
+    flex-grow: 100;
     margin: 45px;
     column-count: 2;
-    column-gap: 110px;
+    column-fill: auto;
+    column-gap: 110px; 
     font-size: 20pt;
-    overflow: hidden;
-    border: red solid 2px;
 
 }

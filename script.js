@@ -17,6 +17,19 @@ const Data = {
     }
 };
 
+const funfects = [
+    "I Love pop music, and I was the lead singer of my pop band called “694.” We performed at school events and local venues. Highlight of our career was when we won the local talent show and got to perform at the city festival.",
+    "I have a secret talent for doing crocheting.",
+    "I can speak three languages: English, Mandarin, and a little bit of Korean.",
+    "My life goal is to travel around the world and try every cuisine out there.",
+    "I wrote a song about I met a goodlooking guy at a bar, and the song won a local music competition.",
+    "I have a collection of stickers that I’ve been collecting since I was a kid, and I still add to it whenever I find a cool one.",
+    "My favorite catoon is Phineas and Ferb, and I still watch it.",
+    "My favorite movie is now Project Hail Mary. I LOVE science fiction.",
+    "If I can do any job without worrying about money, I would be a dog groomer.",
+    "I had a pet hamster named Bobo."
+];
+
 function closeWelcomeCard() {
     const welcomeOverlay = document.querySelector('.welcome-overlay');
     welcomeOverlay.style.display = 'none';
@@ -52,9 +65,15 @@ function openNotebook() {
     /*alert("This notebook is currently under construction. Please check back later for updates!");*/
     const cardOverlay = document.querySelector('.notebook-overlay');
     cardOverlay.style.display = 'flex';
-    const notebook = document.getElementById('notebook');
-    notebook.style.display = 'flex';
+    const card = document.getElementById('notebook');
+    card.style.display = 'flex';
+    const randomFunfact = funfects[Math.floor(Math.random() * funfects.length)];
+    const notebookContent = document.getElementById('notebookContent');
+    notebookContent.innerText = randomFunfact;
+
 }
+
+
 
 function closenotebook() {
     const cardOverlay = document.querySelector('.notebook-overlay');
