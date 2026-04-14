@@ -170,13 +170,12 @@ html, body {
 
 #card-title {
     margin-top: 0;
-    font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
 }
 
 #card-description {
     line-height: 1.6;
-    font-size: 20px;
+    font-size: 25px;
     color: #444;
 }
 
@@ -198,6 +197,7 @@ html, body {
 }
 
 #notebook{
+    position: relative;
     display: block;
     background-image: url("images/notebook-open.png");
     background-size: contain;
@@ -217,6 +217,20 @@ html, body {
     column-count: 2;
     column-fill: auto;
     column-gap: 110px; 
-    font-size: 20pt;
+    font-size: 25pt;
 
+}
+
+#nextFunFact-button {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+    padding: 10px 20px;
+    font-family: 'pixelTitle', cursive;
+    background-color: #daa8e0;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: pop-in 0.3s cubic-bezier(0.175, 0.182, 0.165, 1.3);
 }

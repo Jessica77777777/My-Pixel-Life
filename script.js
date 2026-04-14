@@ -100,3 +100,8 @@ function openNotebook() {
 function closenotebook() {
     notebookOverlay.style.display = 'none';
 }
+
+function nextFunfact() {
+    const randomFunfact = funfacts[Math.floor(Math.random() * funfacts.length)];
+    notebookContent.innerText = randomFunfact;
+}

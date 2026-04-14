@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>My Pixel Life</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -41,9 +40,13 @@
     </div>
 
     <div class="notebook-overlay" onclick="closenotebook(event)">
+    
         <div class="notebook" id="notebook" onclick="event.stopPropagation()">
+            <button id="nextFunFact-button" onclick="nextFunfact()">Next Fun Fact</button>       
             <p id="notebookContent"></p>
         </div>
+        
+        
     </div>
 </body>
 </html>
