@@ -73,9 +73,7 @@ html, body {
 /* -----------Object button styles------------------ */
 @keyframes pixel-shake {
     0% { transform: translate(-50%, -50%); }
-    25% { transform: translate(-48%, -48%); }
     50% { transform: translate(-52%, -52%); }
-    75% { transform: translate(-48%, -52%); }
     100% { transform: translate(-50%, -50%); }
 }
 
@@ -88,7 +86,7 @@ html, body {
     transform: translate(-50%, -50%);
 }
 .object-button:hover {
-    animation: pixel-shake 0.1s infinite; 
+    animation: pixel-shake 0.3s infinite; 
     filter: brightness(1.3);
 }
 
@@ -116,10 +114,6 @@ html, body {
     height: 130px;
     top: 76%;
     left: 54%;
-}
-
-#me-button:hover {
-    animation: pixel-shake .15s infinite; 
 }
 
 

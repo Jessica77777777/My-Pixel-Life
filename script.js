@@ -1,15 +1,20 @@
-const backgroundMusic = document.getElementById('background-music');
+
+/*--------------------------Music--------------------------*/
+const musicElement = document.getElementById('music');
+const playPauseButton = document.getElementById('play-pause');
+const music1 = "assets/1-02. The Star Festival.mp3"
+
 function handleMusic() {
-    if (backgroundMusic.paused) {
-        backgroundMusic.play();
+    if (musicElement.paused) {
+        musicElement.play();
+        playPauseButton.textContent = 'Pause';
     } else {
-        backgroundMusic.pause();
+        musicElement.pause();
+        playPauseButton.textContent = 'Play';
     }
-    const playPauseButton = document.getElementById('play-pause');
-    playPauseButton.textContent = backgroundMusic.paused ? 'Play' : 'Pause';
 }
 
-
+/*--------------------------Data for the cards--------------------------*/
 
 const Data = {
     poodle: {
@@ -35,28 +40,35 @@ const funfacts = [
     "I can speak three languages: English, Mandarin, and a little bit of Korean.",
     "My life goal is to travel around the world and try every cuisine out there.",
     "I wrote a song about I met a goodlooking guy at a bar, and the song won a local music competition.",
-    "I have a collection of stickers that I’ve been collecting since I was a kid, and I still add to it whenever I find a cool one.",
+    "I have a collection of stickers that I've been collecting since I was a kid, and I still add to it whenever I find a cool one.",
     "My favorite cartoon is Phineas and Ferb, and I still watch it.",
     "My favorite movie is now Project Hail Mary. I LOVE science fiction.",
     "If I can do any job without worrying about money, I would be a dog groomer.",
     "I had a pet hamster named Bobo."
 ];
 
-function closeWelcomeCard() {
-    const welcomeOverlay = document.querySelector('.welcome-overlay');
+
+
+
+
+
+
+/*--------------------------Functions for the cards--------------------------*/
+
+const welcomeOverlay = document.querySelector('.welcome-overlay');
+function closeWelcomeCard() {    
     welcomeOverlay.style.display = 'none';
 }
 
-
-function openCard(itemname) {
-    const cardOverlay = document.querySelector('.card-overlay');
-    const title = document.getElementById('card-title');
-    const description = document.getElementById('card-description');
-    const image = document.getElementById('card-image');
+const cardOverlay = document.querySelector('.card-overlay');
+function openCard(itemname) {    
+    let title = document.getElementById('card-title');
+    let description = document.getElementById('card-description');
+    let image = document.getElementById('card-image');
+    
     cardOverlay.style.display = 'flex';
 
-
-    const itemData = Data[itemname];
+    let itemData = Data[itemname];
 
     if (itemData) {
         title.innerText = itemData.title;
@@ -67,27 +79,24 @@ function openCard(itemname) {
 }
 
 function closeCard() {
-    const cardOverlay = document.querySelector('.card-overlay');
     cardOverlay.style.display = 'none';
 }
 
 
+/*--------------------------Functions for the notebook--------------------------*/
 
-function openNotebook() {
-    /*alert("This notebook is currently under construction. Please check back later for updates!");*/
-    const cardOverlay = document.querySelector('.notebook-overlay');
-    cardOverlay.style.display = 'flex';
-    const card = document.getElementById('notebook');
-    card.style.display = 'flex';
+const notebookOverlay = document.querySelector('.notebook-overlay');
+const notebook = document.getElementById('notebook');
+const notebookContent = document.getElementById('notebookContent');
+
+function openNotebook() {  
+    notebookOverlay.style.display = 'flex';    
+    notebook.style.display = 'flex';
     const randomFunfact = funfacts[Math.floor(Math.random() * funfacts.length)];
-    const notebookContent = document.getElementById('notebookContent');
     notebookContent.innerText = randomFunfact;
-
 }
-
 
 
 function closenotebook() {
-    const cardOverlay = document.querySelector('.notebook-overlay');
-    cardOverlay.style.display = 'none';
+    notebookOverlay.style.display = 'none';
 }
