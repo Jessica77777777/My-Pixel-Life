@@ -64,11 +64,10 @@ html, body {
     image-rendering: pixelated;
 }
 
-.obj-trigger {
-    position: absolute;
-    background: transparent;
+#play-pause{
     cursor: pointer;
 }
+
 
 /* -----------Object button styles------------------ */
 @keyframes pixel-shake {
@@ -79,6 +78,7 @@ html, body {
 
 .object-button {
     position: absolute;
+    cursor: pointer;
     border: none;
     background-color: transparent;
     background-size: contain; 
@@ -228,7 +228,7 @@ html, body {
     padding: 10px 20px;
     font-family: 'pixelTitle', cursive;
     background-color: #daa8e0;
-    color: #fff;
+    color: #77076e;
     border: none;
     border-radius: 10px;
     cursor: pointer;
