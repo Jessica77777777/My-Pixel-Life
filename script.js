@@ -17,7 +17,7 @@ function getRandomIndex(list) {
 
 /*--------------------------Datas--------------------------*/
 
-const objectContent = {
+const roomItemContent = {
     poodle: {
         title: "Beibei",
         image: "images/poodle.png",
@@ -89,12 +89,12 @@ function openCard(itemname) {
     
     cardOverlay.style.display = 'flex';
 
-    let itemData = objectContent[itemname];
+    let item = roomItemContent[itemname];
 
-    if (itemData) {
-        title.innerText = itemData.title;
-        description.innerText = itemData.description;
-        image.src = itemData.image;
+    if (item) {
+        title.innerText = item.title;
+        description.innerText = item.description;
+        image.src = item.image;
         cardOverlay.style.display = 'flex';
     }
 }
