@@ -49,12 +49,12 @@ const funfactsList = [
 ];
 
 const musicList = [
-    "assets/musics/music1.mp3",
-    "assets/musics/music2.mp3",
-    "assets/musics/music3.mp3",
-    "assets/musics/music4.mp3",
-    "assets/musics/music5.mp3",
-    "assets/musics/music6.mp3"
+    "assets/music/music1.mp3",
+    "assets/music/music2.mp3",
+    "assets/music/music3.mp3",
+    "assets/music/music4.mp3",
+    "assets/music/music5.mp3",
+    "assets/music/music6.mp3"
 ];
 
 
