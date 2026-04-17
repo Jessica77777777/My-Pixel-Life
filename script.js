@@ -5,9 +5,14 @@ const playPauseButton = document.getElementById('play-pause');
 const welcomeOverlay = document.querySelector('.welcome-overlay');
 const cardOverlay = document.querySelector('.card-overlay');
 const notebookOverlay = document.querySelector('.notebook-overlay');
+/*Card*/
+const title = document.getElementById('card-title');
+const description = document.getElementById('card-description');
+const image = document.getElementById('card-image');
 /*notebook*/
 const notebook = document.getElementById('notebook');
 const notebookContent = document.getElementById('notebookContent');
+
 
 /*-------------------------Utility Functions-------------------------*/
 function getRandomIndex(list) {
@@ -83,9 +88,7 @@ function closeWelcomeCard() {
 
 
 function openCard(itemname) {    
-    let title = document.getElementById('card-title');
-    let description = document.getElementById('card-description');
-    let image = document.getElementById('card-image');
+    
     
     cardOverlay.style.display = 'flex';
 
