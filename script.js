@@ -1,8 +1,18 @@
-
-/*--------------------------Music--------------------------*/
+/*-------------------------Constants-------------------------*/
+/*Music*/
 const musicElement = document.getElementById('music');
 const playPauseButton = document.getElementById('play-pause');
 const music1 = "assets/1-02. The Star Festival.mp3"
+/*Overlays*/
+const welcomeOverlay = document.querySelector('.welcome-overlay');
+const cardOverlay = document.querySelector('.card-overlay');
+const notebookOverlay = document.querySelector('.notebook-overlay');
+/*notebook*/
+const notebook = document.getElementById('notebook');
+const notebookContent = document.getElementById('notebookContent');
+
+/*--------------------------Music--------------------------*/
+
 
 function handleMusic() {
     if (musicElement.paused) {
@@ -16,7 +26,7 @@ function handleMusic() {
 
 /*--------------------------Data for the cards--------------------------*/
 
-const Data = {
+const objectContent = {
     poodle: {
         title: "Beibei",
         image: "images/poodle.png",
@@ -55,12 +65,12 @@ const funfacts = [
 
 /*--------------------------Functions for the cards--------------------------*/
 
-const welcomeOverlay = document.querySelector('.welcome-overlay');
+
 function closeWelcomeCard() {    
     welcomeOverlay.style.display = 'none';
 }
 
-const cardOverlay = document.querySelector('.card-overlay');
+
 function openCard(itemname) {    
     let title = document.getElementById('card-title');
     let description = document.getElementById('card-description');
@@ -68,7 +78,7 @@ function openCard(itemname) {
     
     cardOverlay.style.display = 'flex';
 
-    let itemData = Data[itemname];
+    let itemData = objectContent[itemname];
 
     if (itemData) {
         title.innerText = itemData.title;
@@ -85,15 +95,17 @@ function closeCard() {
 
 /*--------------------------Functions for the notebook--------------------------*/
 
-const notebookOverlay = document.querySelector('.notebook-overlay');
-const notebook = document.getElementById('notebook');
-const notebookContent = document.getElementById('notebookContent');
+
+
+function getRandomFunfactToNotebook() {
+    let randomFunfact = funfacts[Math.floor(Math.random() * funfacts.length)];
+    notebookContent.innerText = randomFunfact;
+}
 
 function openNotebook() {  
     notebookOverlay.style.display = 'flex';    
     notebook.style.display = 'flex';
-    const randomFunfact = funfacts[Math.floor(Math.random() * funfacts.length)];
-    notebookContent.innerText = randomFunfact;
+    getRandomFunfactToNotebook();
 }
 
 
@@ -102,6 +114,5 @@ function closenotebook() {
 }
 
 function nextFunfact() {
-    const randomFunfact = funfacts[Math.floor(Math.random() * funfacts.length)];
-    notebookContent.innerText = randomFunfact;
+    getRandomFunfactToNotebook();
 }
