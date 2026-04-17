@@ -1,8 +1,6 @@
 /*-------------------------Constants-------------------------*/
 /*Music*/
-const musicElement = document.getElementById('music');
 const playPauseButton = document.getElementById('play-pause');
-const music1 = "assets/1-02. The Star Festival.mp3"
 /*Overlays*/
 const welcomeOverlay = document.querySelector('.welcome-overlay');
 const cardOverlay = document.querySelector('.card-overlay');
@@ -11,18 +9,26 @@ const notebookOverlay = document.querySelector('.notebook-overlay');
 const notebook = document.getElementById('notebook');
 const notebookContent = document.getElementById('notebookContent');
 
-/*--------------------------Music--------------------------*/
-
-
-function handleMusic() {
-    if (musicElement.paused) {
-        musicElement.play();
-        playPauseButton.textContent = 'Pause';
-    } else {
-        musicElement.pause();
-        playPauseButton.textContent = 'Play';
-    }
+/*-------------------------Utility Functions-------------------------*/
+function getRandomIndex(list) {
+    return list[Math.floor(Math.random() * list.length)];
 }
+
+/*--------------------------Music--------------------------*/
+let currentMusic = null;
+
+function playRandomMusic() {
+    let randomMusicUrl = getRandomIndex(musicList);
+    let music = new Audio(randomMusicUrl);
+
+    if (currentMusic) {
+        currentMusic.pause();
+    }
+    currentMusic = music;
+    currentMusic.play();
+    playPauseButton.textContent = 'Pause';
+}
+
 
 /*--------------------------Data for the cards--------------------------*/
 
@@ -44,7 +50,7 @@ const objectContent = {
     }
 };
 
-const funfacts = [
+const funfactsList = [
     "I Love pop music, and I was the lead singer of my pop band called “694.” We performed at school events and local venues. Highlight of our career was when we won the local talent show and got to perform at the city festival.",
     "I have a secret talent for doing crocheting.",
     "I can speak three languages: English, Mandarin, and a little bit of Korean.",
@@ -55,6 +61,10 @@ const funfacts = [
     "My favorite movie is now Project Hail Mary. I LOVE science fiction.",
     "If I can do any job without worrying about money, I would be a dog groomer.",
     "I had a pet hamster named Bobo."
+];
+
+const musicList = [
+    "assets/music/1-02. The Star Festival.mp3",
 ];
 
 
@@ -98,8 +108,7 @@ function closeCard() {
 
 
 function getRandomFunfactToNotebook() {
-    let randomFunfact = funfacts[Math.floor(Math.random() * funfacts.length)];
-    notebookContent.innerText = randomFunfact;
+    notebookContent.innerText = getRandomIndex(funfactsList);
 }
 
 function openNotebook() {  
