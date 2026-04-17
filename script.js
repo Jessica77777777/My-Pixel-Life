@@ -14,23 +14,8 @@ function getRandomIndex(list) {
     return list[Math.floor(Math.random() * list.length)];
 }
 
-/*--------------------------Music--------------------------*/
-let currentMusic = null;
 
-function playRandomMusic() {
-    let randomMusicUrl = getRandomIndex(musicList);
-    let music = new Audio(randomMusicUrl);
-
-    if (currentMusic) {
-        currentMusic.pause();
-    }
-    currentMusic = music;
-    currentMusic.play();
-    playPauseButton.textContent = 'Pause';
-}
-
-
-/*--------------------------Data for the cards--------------------------*/
+/*--------------------------Datas--------------------------*/
 
 const objectContent = {
     poodle: {
@@ -64,13 +49,29 @@ const funfactsList = [
 ];
 
 const musicList = [
-    "assets/music/1-02. The Star Festival.mp3",
+    "assets/musics/music1.mp3",
+    "assets/musics/music2.mp3",
+    "assets/musics/music3.mp3",
+    "assets/musics/music4.mp3",
+    "assets/musics/music5.mp3",
+    "assets/musics/music6.mp3"
 ];
 
 
+/*--------------------------Music--------------------------*/
+let currentMusic = null;
 
+function playRandomMusic() {
+    let randomMusicUrl = getRandomIndex(musicList);
+    let music = new Audio(randomMusicUrl);
 
-
+    if (currentMusic) {
+        currentMusic.pause();
+    }
+    currentMusic = music;
+    currentMusic.play();
+    playPauseButton.textContent = 'Next Music';
+}
 
 
 /*--------------------------Functions for the cards--------------------------*/
